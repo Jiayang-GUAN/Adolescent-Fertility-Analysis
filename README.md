@@ -6,6 +6,7 @@
 - [Install](#install)
 - [Usage](#usage)
 - [Adolescent Fertility Analysis Report](#adolescent-fertility-analysis-report)
+- [Data Sources](#data-sources)
 
 
 ## Background
@@ -14,6 +15,12 @@ Approximately 16 million young people aged 15-19 give birth each year, accountin
 
 
 ## Install
+
+Environment
+
+```
+Python 3.7.7
+```
 
 Clone the git repo, then install the requirements with pip
 
@@ -33,7 +40,21 @@ python app.py
 ```
 
 
-myClass.py is for data processing.
+myClass.py<br/>
+
+myClass.py is for data processing.<br/>
+
+
+4 founctions:<br/>
+
+initializeDataframe : This function is to simply initialize the dataframe. The CSV file contains some useless rows, so we need to delete them and set the column names.<br/>
+
+changeStru : This function is to change the structure of the dataframe. We need a "tidy" data structure: each variable is a column, each observation is a row.<br/>
+
+getDataframe : Use this function to call the initializeDataframe function and the changeStru function to avoid heavy code.<br/>
+
+uniteDataframe : In order to display the data more clearly and quickly, we can combine the two dataframes. And because each data file contains different countries with data, we need to do some filtering to keep the same country data.
+<br/>
 
 
 ## Adolescent Fertility Analysis Report
@@ -125,6 +146,17 @@ Fortunately, in the past two to three decades, the adolescent fertility rate in 
  &nbsp;         
     
 ![png](Adolescent%20Fertility%20Analysis%20Report_files/Adolescent%20Fertility%20Analysis%20Report_47_1.png)
-    
+
+
+
+## Data Sources
+
+Adolescent fertility : https://data.worldbank.org/indicator/SP.ADO.TFRT?view=chart<br/>
+GDP : https://data.worldbank.org/indicator/NY.GDP.MKTP.CD?view=chart<br/>
+Secondary school enrollment : https://data.worldbank.org/indicator/SE.SEC.ENRR?view=chart<br/>
+Labor force female : https://data.worldbank.org/indicator/SL.TLF.TOTL.FE.ZS?view=chart<br/>
+
+
+
 
 
